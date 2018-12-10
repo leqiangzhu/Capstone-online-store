@@ -1,6 +1,9 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
+import Error404 from './Error404';
+import Header from './Header';
+import   SignInForm from './SignInForm'
 
 /*
   import { Link } from 'react-router-dom';
@@ -15,10 +18,12 @@ function App(){
       <style jsx>{`
         font-family: Helvetica;
       `}</style>
-      CapsoneProject
-      {/* <Switch>
-        <Route exact path='/' component={} />
-      </Switch> */}
+       <Header />
+      <Switch>
+      {/* <Route exact path='/' component={Header} /> */}
+        <Route exact path='/signin' component={SignInForm} />
+      <Route component={Error404} />
+      </Switch>
     </div>
   );
 }
