@@ -15,9 +15,9 @@ function SignInForm(props) {
     console.log(_name.value);
        
     event.preventDefault();
-    props.onNewTapCreation({
+    props.onNewAccountCreation({
       name: _name.value,
-      _email: __email.value,
+      email: __email.value,
       password: _password.value,
       passwordConfirm: _passwordConfirm.value,
       
@@ -58,7 +58,7 @@ function SignInForm(props) {
       `}</style>
            
            
-      {/* create new tap */}
+      {/* signin  */}
       <form onSubmit={handleSignInFormSubmission}>
         <input
           type='text'
@@ -100,6 +100,6 @@ function SignInForm(props) {
   );
 }
 SignInForm.propTypes = {
-  onNewTapCreation: PropTypes.func
+  onNewAccountCreation: PropTypes.func
 };
 export default SignInForm;
