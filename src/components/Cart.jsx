@@ -2,13 +2,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Order(){
+function Cart(){
   return (
     <div>
-      <h2>This page is Order page!!!</h2>
+      <h2>This page is Cart page!!!</h2>
 
     </div>
   );
 }
 
-export default Order;
+export default Cart;

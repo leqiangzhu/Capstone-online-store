@@ -3,8 +3,12 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
 import Header from './Header';
-import SignInForm from './SignInForm'
+// import SignInForm from './SignInForm'
 import Home from './Home'
+
+import Cart from './Cart'
+
+
 
 
 function App(){
@@ -18,7 +22,8 @@ function App(){
        <Header />
       <Switch>
       <Route exact path='/' component={Home} />
-      <Route exact path='/signin' component={SignInForm} />
+      <Route exact path='/cart' component={Cart} />
+      {/* <Route exact path='/signin' component={SignInForm} /> */}
       <Route component={Error404} />
       </Switch>
     </div>
