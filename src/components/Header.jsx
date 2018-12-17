@@ -34,9 +34,12 @@ function Header() {
           </li>
           <li>
             <Link to="/signin">Sign in</Link>
+            <li>
+            <Link to="/cart">cart</Link>
+          </li>
           </li>
           <li>
-            <Link to="#">Sign up</Link>
+            <Link to="signup">Sign up</Link>
           </li>
         </ul>
 

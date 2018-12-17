@@ -8,7 +8,13 @@ import Home from './Home'
 
 import Cart from './Cart'
 
-
+const NavBar=(props)=><nav>
+<ul>
+  <li>
+    <NavLink to ="/">Home</NavLink>
+  </li>
+</ul>
+</nav>
 
 
 function App(){

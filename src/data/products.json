@@ -1,4 +1,4 @@
-"products": [
+{"products": [
 {
 "id": "0003",
 "name": "Modern Chair",
@@ -248,4 +248,4 @@
 "returned": 15,
 "offset": 0,
 "limit": 100
-}
+}}
