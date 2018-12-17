@@ -1,7 +1,15 @@
 import React from 'react';
 import {createStorte,comineReducers} from 'redus';
-const rootReducer  =comineReducers({
+import { reducer as formReducer } from 'redux-form'
+// import cartReducer from '../product/cart/reducer'
 
+import productsReducer from '../components/product/product-listing/reducer'
+
+
+const rootReducer  =comineReducers({
+    cart: cartReducer,
+    products: productsReducer,
+    form: formReducer,
 
 })
 const store=createStorte(

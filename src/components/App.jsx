@@ -4,9 +4,9 @@ import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
 import Header from './Header';
 // import SignInForm from './SignInForm'
-import Home from './Home'
+import Home from './pages/Home'
 
-import Cart from './Cart'
+import Cart from './pages/Cart'
 
 const NavBar=(props)=><nav>
 <ul>
