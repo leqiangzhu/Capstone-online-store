@@ -1,19 +1,10 @@
+import React from 'react'
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Cart from './Cart'
+import ProductListing from '../components/product/index'
 
-import ProductList from '../product/product-listing/productList';
-
-
-import data from '../../data/products.json'
-function Home(){
-  return (
-    <div>
-      <h2>This page is Home page</h2>
-    <Cart/>
-    </div>
-  );
+export default function Homepage(props) {
+  return <div>
+    <h2>Homepage</h2>
+    <ProductListing />
+  </div>
 }
-
-export default Home;

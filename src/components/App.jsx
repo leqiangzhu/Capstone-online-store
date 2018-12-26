@@ -1,42 +1,32 @@
-import React from 'react';
-//import PropTypes from 'prop-types';
-import { Switch, Route } from 'react-router-dom';
-import Error404 from './Error404';
-import Header from './Header';
-// import SignInForm from './SignInForm'
-import Home from './pages/Home'
+import React, { Component } from 'react';
+import { NavLink, withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-import Cart from './pages/Cart'
+import Router from './Router'
 
-const NavBar=(props)=><nav>
-<ul>
-  <li>
-    <NavLink to ="/">Home</NavLink>
-  </li>
-</ul>
+const Navigation = ({ cart }) => <nav>
+  <ul className="top-menu">
+    <li><NavLink to='/'>Home</NavLink></li>
+    <li><NavLink to='/cart'>Cart ({cart.reduce((acc, item) => {
+      return acc + item.quantity
+    }, 0)})</NavLink></li>
+    <li><NavLink to='/checkout'>Check out</NavLink></li>
+  </ul>
 </nav>
 
-
-function App(){
-  var styles = {
-  };
-  return (
-    <div style={styles}>
-      <style jsx>{`
-        font-family: Helvetica;
-      `}</style>
-       <Header />
-      <Switch>
-      <Route exact path='/' component={Home} />
-      <Route exact path='/cart' component={Cart} />
-      {/* <Route exact path='/signin' component={SignInForm} /> */}
-      <Route component={Error404} />
-      </Switch>
+class App extends Component {
+  render() {
+    return <div className='page-container'>
+      <Navigation { ...this.props } />
+      <Router />
     </div>
-  );
+  }
 }
 
-//App.propTypes = {
-//};
+function mapStateToProps(state) {
+  return {
+    cart: state.cart,
+  }
+}
 
-export default App;
+export default withRouter(connect(mapStateToProps)(App));
